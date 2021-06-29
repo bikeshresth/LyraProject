@@ -1,0 +1,46 @@
+{
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "moxie",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "luzon": {
+      "tags": []
+    },
+    "luzon-e2e": {
+      "tags": [],
+      "implicitDependencies": ["luzon"]
+    },
+    "odin": {
+      "tags": []
+    },
+    "luzon-shared-components": {
+      "tags": []
+    },
+    "luzon-shared-components-e2e": {
+      "tags": [],
+      "implicitDependencies": ["luzon-shared-components"]
+    }
+  }
+}

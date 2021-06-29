@@ -1,0 +1,24 @@
+version: 0.2
+
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      - echo 'Installing app dependencies...'
+      
+  pre_build:
+    commands:
+      - npm i
+      
+  build:
+    commands:
+      - npx nx build luzon
+
+artifacts:
+  files:
+    - '**/*'
+
+  discard-paths: no
+  base-directory: 'dist/apps/luzon*'

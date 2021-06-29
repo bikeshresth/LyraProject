@@ -1,0 +1,40 @@
+image: node:15.13-alpine
+  # node:10.8.0
+options:
+  max-time: 15
+pipelines:
+  default:
+  # HEUB-376-DO: #feature branch   
+  - step:
+      name: test and build
+      image: cypress/base:10
+      script:
+        # Install dependencies
+        - echo "Install dependencies"
+        - npm install 
+        - npm install nx
+
+        # Run test
+        - echo "Run test"
+        - npx nx test luzon
+        - npx nx test odin
+
+        # Build luzon
+        - echo "Build luzon"
+        - npx nx build luzon
+
+        # Build odin
+        - echo "Build odin"
+        - npx nx build odin
+
+  # - step:
+  #     name: Build
+  #     image: cypress/base:10
+  #     script:
+  #       - npx nx build
+
+
+# definitions:
+#   caches:
+#     npm: $HOME/.npm
+#     cypress: $HOME/.cache/Cypress

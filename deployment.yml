@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nx-backend
+  namespace: nx1
+  labels:
+    app: nx-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nx-backend
+  template:
+    metadata:
+      labels:
+        app: nx-backend
+    spec:
+      containers:
+      - name: nx-backend
+        image: CONTAINER_IMAGE
+        ports:
+        - containerPort: 3333
