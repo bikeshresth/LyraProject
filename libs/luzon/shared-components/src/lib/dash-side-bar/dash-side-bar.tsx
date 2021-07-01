@@ -4,7 +4,7 @@ import { Layout, Menu , Divider} from 'antd';
 import React from "react";
 import {render} from 'react-dom';
 
-// import 'antd/dist/antd.css'; 
+import 'antd/dist/antd.css'; 
 import { ImOffice,ImUsers,ImBell } from "react-icons/im";
 import { RiUserSearchFill,RiRoadMapFill } from "react-icons/ri";
 import { BiUserPin,BiSupport} from "react-icons/bi"
