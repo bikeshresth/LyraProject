@@ -6,7 +6,7 @@ export interface HeaderProps {}
 export function Header(props: HeaderProps) {
   return (
     <div>
-      <h1>Welcome to Header!</h1>
+      <h1>Welcome to Lyra Project!</h1>
     </div>
   );
 }
