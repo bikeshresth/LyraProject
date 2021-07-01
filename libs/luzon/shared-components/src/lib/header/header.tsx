@@ -7,6 +7,7 @@ export function Header(props: HeaderProps) {
   return (
     <div>
       <h1>Welcome to Lyra Project!</h1>
+
     </div>
   );
 }
