@@ -1,0 +1,19 @@
+    1  git add .
+    2  git checkout feature/sidebar
+    3  gitbranch
+    4  git branch
+    5  git commit -m "adding one new file"
+    6  git push
+    7  git checkout main
+    8  git commit -m "adding two files" 
+    9  git push
+   10  git pull
+   11  git push
+   12  git add .
+   13  git commit -m "adding one file"
+   14  git push
+   15  git status 
+   16  git status
+   17  git status
+   18  git push
+   19  history >> history.txt
